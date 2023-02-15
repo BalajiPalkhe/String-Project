@@ -54,6 +54,10 @@ public interface StringProblemsInterface
 	//to find out longest sub string from the given String------------------
 	void longestSubString(String s1);
 	
+
+	//check whether the given String ends with another string or not-------------------
+	void myEndsWithMethod(String s1, String s2);
+	
 	
 //	//sort String in ascending order by length
 //	void ascSortByLength(String s1);
