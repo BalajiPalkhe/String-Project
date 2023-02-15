@@ -25,12 +25,12 @@ public class StringProblemsImplements implements StringProblemsInterface
 		{
 			if(i==index)
 			{
-				System.out.print(c[i]);
+				System.out.println("Character At Index "+index+" is : "+c[i]);
 				d++;
 			}
 		}
 		if(d==0)
-		System.out.println("out of range index");
+		System.out.println("Out of Range Index");
 	}
 
 	
