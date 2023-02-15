@@ -388,6 +388,51 @@ public class StringProblemsImplements implements StringProblemsInterface
 		return true;
 	}
 
+
+
+	public void longestSubString(String s1) 
+	{
+		String s2="";//it will be the longest String-
+		
+		for (int i = 0; i < s1.length(); i++) 
+		{
+			for (int j = 0; j < s1.length(); j++) 
+			{
+				String s3=mySubstring(s1,i,j);
+				boolean result=areAllCharacterUnique(s3);
+				if(result)
+					if(s3.length()>s2.length())
+						s2=s3;
+			}
+		}
+		System.out.println(s2);
+	}
+
+	private static boolean areAllCharacterUnique(String s1) 
+	{
+		for(int i=0; i<s1.length();i++)
+		{
+			for(int j=0; j<i; j++)
+			{
+				if(s1.charAt(i)==s1.charAt(j))
+					return false;
+			}
+		}
+		return true;
+	}
+
+	private static String mySubstring(String s, int i, int j) 
+	{
+		String s1="";
+		for (int k = i; k <=j ; k++) 
+		{
+			s1=s1+s.charAt(k);
+		}
+		return s1;
+		
+		
+	}
+
 	
 
 	
