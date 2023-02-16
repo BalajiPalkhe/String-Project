@@ -6,6 +6,7 @@ public class StringProblemsImplements implements StringProblemsInterface
 	//Conversion of String elements into character Array---------
 	public void myStringToCharArray(String s1) 
 	{
+		System.out.println("String to character array conversion : ");
 		char[] ch=new char[s1.length()];
 		for(int i=0; i<s1.length(); i++)
 		{
@@ -38,7 +39,8 @@ public class StringProblemsImplements implements StringProblemsInterface
 	public void getAllIndex(String s1) 
 	{
 		char[] ch=new char[s1.length()];
-		
+	
+		System.out.println("All the index of characters present in given String : ");
 		for (int i = 0; i < s1.length(); i++) 
 		{
 			ch[i]=s1.charAt(i);
@@ -56,8 +58,8 @@ public class StringProblemsImplements implements StringProblemsInterface
 			char ch=s1.charAt(i);
 			s2=s2+ch+ch;
 		}
-		
-		System.out.println(s2);
+		System.out.println("String after repeating each character twice : ");
+		System.out.print(s2);
 	}
 
 	
@@ -65,9 +67,9 @@ public class StringProblemsImplements implements StringProblemsInterface
 	public void checkStringContainsOnlyDigit(String s1) 
 	{
 		if(onlyDigit(s1))
-			System.out.println("Only Digit");
+			System.out.println("String has only digit");
 		else
-			System.out.println("Not only Digit");
+			System.out.println("String has not only digit");
 	}
 
 	
@@ -88,7 +90,7 @@ public class StringProblemsImplements implements StringProblemsInterface
 	public void sumOfDigitInString(String s1) 
 	{
 		int sum=sumofDigit(s1);
-		System.out.println(sum);
+		System.out.println("Sum of digits in Given String : "+sum);
 
 	}
 
@@ -114,24 +116,15 @@ public class StringProblemsImplements implements StringProblemsInterface
 	//Reverse the given String-----------------------------------
 	public void reverseString(String s1) 
 	{
+		System.out.println("Before reversing string : "+s1);
+		System.out.println("After reversing string : ");
 		String s2="";
 		//by applying normal for loop
 		for (int i = 0; i < s1.length(); i++) 
 		{
 			s2=s1.charAt(i)+s2;
 		}
-		
-		System.out.println(s2);
-		
-//		String s3="";
-//		// By applying reverse for loop
-//		for (int i = s1.length()-1; i >=0; i--) 
-//		{
-//			s3=s3+s1.charAt(i);
-//			
-//		}
-//		System.out.println(s3);
-		
+		System.out.print(s2);
 	}
 
 	
@@ -149,6 +142,7 @@ public class StringProblemsImplements implements StringProblemsInterface
 			else
 				s2=s2+s.charAt(i);
 		}
+		System.out.println("String after removing all the extra spaces : ");
 		System.out.println(s2);
 	}
 	private static String myTrim(String s1) 
@@ -185,6 +179,8 @@ public class StringProblemsImplements implements StringProblemsInterface
 
 	public void removeDuplicate(String s1) 
 	{
+		System.out.println("Before removing Duplicate character : "+s1);
+		System.out.print("After removing Dupicate character : ");
 		for(int i=0; i<s1.length(); i++)
 		{
 			int count=0;
@@ -196,11 +192,14 @@ public class StringProblemsImplements implements StringProblemsInterface
 			if(count==0)
 			System.out.print(s1.charAt(i));
 		}
+		System.out.println();
 	}
 
 	//Remove specified character from given String--------------------
 	public void removeSpecificCharacter(String s1, char ch) 
 	{
+		System.out.println("Before removing specific character : "+s1);
+		System.out.println("After removing specific character : ");
 		for(int i=0; i<s1.length(); i++)
 		{
 			if(s1.charAt(i)!=ch)
@@ -229,6 +228,7 @@ public class StringProblemsImplements implements StringProblemsInterface
 			}
 		}
 		s1=new String(c);
+		System.out.println("Sorted number in String : ");
 		System.out.println(s1);
 	}
 
@@ -255,6 +255,7 @@ public class StringProblemsImplements implements StringProblemsInterface
 				index=i;
 			}
 		}
+		System.out.println("Maximum Frequent Character is : ");
 		System.out.println(max+"\n"+s1.charAt(index));
 	}
 	
@@ -321,6 +322,7 @@ public class StringProblemsImplements implements StringProblemsInterface
 				index=i;//index for getting second most frequent element from character array
 			}
 		}
+		System.out.println("Second max frequent character is : ");
 		System.out.println(ca[index]+" "+max2);
 
 		
@@ -372,7 +374,7 @@ public class StringProblemsImplements implements StringProblemsInterface
 	{
 		boolean result=isPalindrome(s1);
 		
-		System.out.println(result?"Palindrome":"Not");
+		System.out.println(result?"Given String is Palindrome":"Given String is not Palindrome");
 	}
 
 	private static boolean isPalindrome(String s) {
@@ -406,7 +408,7 @@ public class StringProblemsImplements implements StringProblemsInterface
 						s2=s3;
 			}
 		}
-		System.out.println(s2);
+		System.out.println("Longest SubString is : "+s2);
 	}
 
 	private static boolean areAllCharacterUnique(String s1) 
