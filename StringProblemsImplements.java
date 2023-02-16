@@ -389,6 +389,7 @@ public class StringProblemsImplements implements StringProblemsInterface
 	}
 
 
+<<<<<<< HEAD
 
 	public void longestSubString(String s1) 
 	{
@@ -438,6 +439,12 @@ public class StringProblemsImplements implements StringProblemsInterface
 	public void myEndsWithMethod(String s1, String s2) 
 	{
 		
+=======
+//check whether the given String ends with another string or not-------------------- 
+	public void myEndsWithMethod(String s1, String s2) 
+	{
+
+>>>>>>> test
 		boolean result=myEndsWith(s1,s2);
 		System.out.println(result);
 	}
@@ -457,6 +464,10 @@ public class StringProblemsImplements implements StringProblemsInterface
 			j--;
 		}
 		return true;
+<<<<<<< HEAD
+=======
+		
+>>>>>>> test
 	}
 
 	

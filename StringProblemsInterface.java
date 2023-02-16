@@ -38,6 +38,7 @@ public interface StringProblemsInterface
 	//find out largest and smallest word in given String-----
 	//void largestAndSmallestWord(String s1);
 	
+<<<<<<< HEAD
 	//find out max frequency of character in String------------------------
 	void maxFrequentChar(String s1);
 	
@@ -60,6 +61,23 @@ public interface StringProblemsInterface
 	
 	
 	//testing comment------------------------------
+=======
+	//find out max frequency of character in String-------------------[
+	void maxFrequentChar(String s1);
+	
+		
+	//find out second max frequency of character in String--------------------------
+	void secondMaxFrequentChar(String s1);
+	
+	
+	//check whether given is palindrome or not-------------------------
+	void isStringPalindrome(String s1);
+	
+	
+	//check whether the given string ends with another string or not-------------
+	void myEndsWithMethod(String s1, String s2);
+	
+>>>>>>> test
 //	//sort String in ascending order by length
 //	void ascSortByLength(String s1);
 //	
