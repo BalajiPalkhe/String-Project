@@ -17,7 +17,7 @@ public class Main {
 		
 		while(true)
 		{
-			System.out.println("-----------Choose option : ------------\n1.Conversion of String elements into character Array.\n2.Get the character at given index.\n3.get index of all characters in Given String.\n4.Repeat each character twice in given String.\n5.Check whether String contains only digit or not.\n6.Sum of all the digits present in the string.\n7.Reverse the given String.\n8.Remove all extra blank spaces\n9.Remove duplicate from given String\n10.Remove specified character from given String\n11.Sorting of numbers present in String\n12.Find out max frequency of character in String\n13.Find out second max frequency of character in String\n14.Check whether given is palindrome or not.\n15.Find out longest sub string from the given String.\n16.Check whether the given String ends with another string or not.");
+			System.out.println("-----------Choose option : ------------\n1.Conversion of String elements into character Array.\n2.Get the character at given index.\n3.get index of all characters in Given String.\n4.Repeat each character twice in given String.\n5.Check whether String contains only digit or not.\n6.Sum of all the digits present in the string.\n7.Reverse the given String.\n8.Remove all extra blank spaces\n9.Remove duplicate from given String\n10.Remove specified character from given String\n11.Sorting of numbers present in String\n12.Find out max frequency of character in String\n13.Find out second max frequency of character in String\n14.Check whether given is palindrome or not.\n15.Find out longest sub string from the given String.\n16.Check whether the given String ends with another string or not.\n0.Exit the program");
 			int input=scan.nextInt();
 			
 			if(input==1)

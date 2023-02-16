@@ -408,7 +408,7 @@ public class StringProblemsImplements implements StringProblemsInterface
 						s2=s3;
 			}
 		}
-		System.out.println("Longest SubString is : "+s2);
+		System.out.println("Longest SubString without repeating character is : "+s2);
 	}
 
 	private static boolean areAllCharacterUnique(String s1) 
