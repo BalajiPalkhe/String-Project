@@ -123,14 +123,14 @@ public class StringProblemsImplements implements StringProblemsInterface
 		
 		System.out.println(s2);
 		
-		String s3="";
-		// By applying reverse for loop
-		for (int i = s1.length()-1; i >=0; i--) 
-		{
-			s3=s3+s1.charAt(i);
-			
-		}
-		System.out.println(s3);
+//		String s3="";
+//		// By applying reverse for loop
+//		for (int i = s1.length()-1; i >=0; i--) 
+//		{
+//			s3=s3+s1.charAt(i);
+//			
+//		}
+//		System.out.println(s3);
 		
 	}
 
