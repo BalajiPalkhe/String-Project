@@ -440,24 +440,19 @@ public class StringProblemsImplements implements StringProblemsInterface
 		
 
 //check whether the given String ends with another string or not-------------------- 
-	public void myEndsWithMethod(String s1, String s2) 
+	
+	
+	public boolean myEndsWith(String s1, String s3) 
 	{
-
-
-		boolean result=myEndsWith(s1,s2);
-		System.out.println(result);
-	}
-	private static boolean myEndsWith(String s1, String s2) 
-	{
-		if(s2.length()>s1.length())
+		if(s3.length()>s1.length())
 			return false;
 		
 		int i=s1.length()-1;
-		int j=s2.length()-1;
+		int j=s3.length()-1;
 		
 		while(j>=0)
 		{
-			if(s1.charAt(i)!=s2.charAt(j))
+			if(s1.charAt(i)!=s3.charAt(j))
 				return false;
 			i--;
 			j--;

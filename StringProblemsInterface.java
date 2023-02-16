@@ -57,7 +57,7 @@ public interface StringProblemsInterface
 	
 
 	//check whether the given String ends with another string or not-------------------
-	void myEndsWithMethod(String s1, String s2);
+	public boolean myEndsWith(String s1, String s3);
 	
 	
 	
