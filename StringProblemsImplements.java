@@ -13,6 +13,8 @@ public class StringProblemsImplements implements StringProblemsInterface
 			ch[i]=s1.charAt(i);
 			System.out.print(ch[i]+" ");
 		}
+		System.out.println();
+		System.out.println();
 	}
 
 	
@@ -32,6 +34,8 @@ public class StringProblemsImplements implements StringProblemsInterface
 		}
 		if(d==0)
 		System.out.println("Out of Range Index");
+		System.out.println();
+		
 	}
 
 	
@@ -60,6 +64,7 @@ public class StringProblemsImplements implements StringProblemsInterface
 		}
 		System.out.println("String after repeating each character twice : ");
 		System.out.print(s2);
+		System.out.println();
 	}
 
 	
@@ -70,6 +75,8 @@ public class StringProblemsImplements implements StringProblemsInterface
 			System.out.println("String has only digit");
 		else
 			System.out.println("String has not only digit");
+		
+		System.out.println();
 	}
 
 	
@@ -92,6 +99,7 @@ public class StringProblemsImplements implements StringProblemsInterface
 		int sum=sumofDigit(s1);
 		System.out.println("Sum of digits in Given String : "+sum);
 
+		System.out.println();
 	}
 
 	
@@ -117,7 +125,7 @@ public class StringProblemsImplements implements StringProblemsInterface
 	public void reverseString(String s1) 
 	{
 		System.out.println("Before reversing string : "+s1);
-		System.out.println("After reversing string : ");
+		System.out.print("After reversing string : ");
 		String s2="";
 		//by applying normal for loop
 		for (int i = 0; i < s1.length(); i++) 
@@ -125,6 +133,7 @@ public class StringProblemsImplements implements StringProblemsInterface
 			s2=s1.charAt(i)+s2;
 		}
 		System.out.print(s2);
+		System.out.println();
 	}
 
 	
@@ -135,7 +144,7 @@ public class StringProblemsImplements implements StringProblemsInterface
 		String s=myTrim(s1);
 		
 		String s2="";
-		for (int i = 0; i < s.length()-1; i++) 
+		for (int i = 0; i < s.length(); i++) 
 		{
 			if(s.charAt(i)==' ' && s.charAt(i+1)==' ')	
 			{}
@@ -199,12 +208,13 @@ public class StringProblemsImplements implements StringProblemsInterface
 	public void removeSpecificCharacter(String s1, char ch) 
 	{
 		System.out.println("Before removing specific character : "+s1);
-		System.out.println("After removing specific character : ");
+		System.out.print("After removing specific character : ");
 		for(int i=0; i<s1.length(); i++)
 		{
 			if(s1.charAt(i)!=ch)
 			System.out.print(s1.charAt(i));
 		}
+		System.out.println();
 	}
 	
 	
@@ -228,8 +238,9 @@ public class StringProblemsImplements implements StringProblemsInterface
 			}
 		}
 		s1=new String(c);
-		System.out.println("Sorted number in String : ");
-		System.out.println(s1);
+		System.out.print("Sorted characters in String : ");
+		System.out.print(s1);
+		System.out.println();
 	}
 
 	
@@ -256,7 +267,7 @@ public class StringProblemsImplements implements StringProblemsInterface
 			}
 		}
 		System.out.println("Maximum Frequent Character is : ");
-		System.out.println(max+"\n"+s1.charAt(index));
+		System.out.println("Frequency : "+max+"\n"+"Character : "+s1.charAt(index));
 	}
 	
 	
@@ -323,7 +334,7 @@ public class StringProblemsImplements implements StringProblemsInterface
 			}
 		}
 		System.out.println("Second max frequent character is : ");
-		System.out.println(ca[index]+" "+max2);
+		System.out.println("Character : "+ca[index]+"\n"+"Frequency : "+max2);
 
 		
 	}
