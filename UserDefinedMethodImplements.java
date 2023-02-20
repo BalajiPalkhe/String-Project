@@ -1,60 +1,84 @@
 //madhav Branch------------
-
 package stringProject;
 
 public class UserDefinedMethodImplements implements UserDefinedMethodInterface
 {
 	
+	//to check the 2nd string is starts with 1st string----------
 	public boolean startsWithMethod(String s1,String s2)
 	{
-		if(s2.length()>s1.length())
-		return false;
-		
-		for(int i=0;i<s2.length();i++)
+		if(s2.length()<=s1.length())
 		{
-			if(s2.charAt(i)!=s1.charAt(i))
+			
+			for(int i=0;i<s2.length();i++)
+			{
+				if(s2.charAt(i)!=s1.charAt(i))
 				return false;
+			}
+				return true;
 		}
-		return true;
+		return false;
+	
 	}
 	
+	//to check the 2nd string is ends with 1st string----------
 	public boolean endsWithMethod(String s1,String s2)
 	{
-		if(s2.length()>s1.length())
+		if(s2.length()<=s1.length())
+		{
+			int i=s1.length()-1;
+			int j=s2.length()-1;
+		
+			while(j>=0)
+			{
+				if(s1.charAt(i)!=s2.charAt(j))
+				return false;
+				i--;
+				j--;
+			}
+			return true;
+		}
 		return false;
 		
-		int i=s1.length()-1;
-		int j=s2.length()-1;
-		for(int k=0;k<s2.length();k++)
-		{
-			if(s1.charAt(i)!=s2.charAt(j))
-				break;
-			i--;
-			j--;
-		}
-		return true;
 		
 	}
 	
-	public boolean containsMethod(String s1,String s2)
+	//to check the data in 2nd string is same as in 1st string------
+	public  boolean containsMethod(String s1,String s2)
 	{
-		if(s1.length()!=s2.length())
+		if(s1.length()<s2.length())
 		return false;
 		for(int i=0;i<s1.length();i++)
 		{
-			if(s1.charAt(i)!=s2.charAt(i))
-				return false;
+			if(s1.charAt(i)==s2.charAt(0))
+			{
+				 int j=i+1;
+			     int k=1;
+			     int cnt=1;
+			     while(k<s2.length()&& j<s1.length())
+			     {
+			    	 if(s1.charAt(j)==s2.charAt(k))
+			    		cnt++;
+			    	 else
+			    		 break;
+			    	 j++;
+			    	 k++;
+			     }
+			     if(cnt==s2.length())
+			    	 return true;
+			}
 		}
-		return true;
+		return false;
 	}
 	
+	//to convert the given string in uppercase--------
 	public String toUpperCaseMethod(String s1)
 	{
-		String s3="sfg";
+		
 		String s2="";
-		for(int i=0;i<s3.length();i++)
+		for(int i=0;i<s1.length();i++)
 		{
-			char ch=s3.charAt(i);
+			char ch=s1.charAt(i);
 			if(ch>='a' && ch<='z')
 			{
 				ch=(char)(ch-32);
@@ -63,10 +87,10 @@ public class UserDefinedMethodImplements implements UserDefinedMethodInterface
 			else
 				s2=s2+ch;
 		}
-		System.out.println(s2);
 		return s2;
 	}
 	
+	//to convert the given string in lowercase-------
 	public String toLowerCaseMethod(String s1)
 	{
 		String s2="";
@@ -84,6 +108,7 @@ public class UserDefinedMethodImplements implements UserDefinedMethodInterface
 		return s2;
 	}
 	
+	//to remove the leading and trailing spaces in string-----
 	public String trimMethod(String s1)
 	{
 		String s2="";
@@ -104,11 +129,12 @@ public class UserDefinedMethodImplements implements UserDefinedMethodInterface
 				break;
 		}
 		for(int k=i;k<=j;k++)
-			s2=s1.charAt(k)+s2;
+			s2=s2+s1.charAt(k);
 		
 		return s2;
 	}
 	
+	//to Get first index of a string within a string
 	public int indexOfMethod(String s1,String s2)
 	{
 		if(s2.length()>s1.length())
@@ -142,6 +168,7 @@ public class UserDefinedMethodImplements implements UserDefinedMethodInterface
 		return -1;
 	}
 	
+	//to Get last index of a string within a string
 	public int lastIndexOfMethod(String s1,String s2)
 	{
 		if(s2.length()>s1.length())
@@ -175,9 +202,12 @@ public class UserDefinedMethodImplements implements UserDefinedMethodInterface
 		return -1;
 		
 	}
+	
+	//To Compare two string lexicographically , ignoring casedifferences-------
 	public int compareToIgnoreCaseMethod(String s1, String s2) 
 	{
 		s1=toLowerCaseMethod(s1);
+		s2=toLowerCaseMethod(s2);
 		for(int i=0;i<s1.length() &&  i< s2.length();i++)
 		{
 			if(s1.charAt(i)!=s2.charAt(i))
@@ -186,8 +216,20 @@ public class UserDefinedMethodImplements implements UserDefinedMethodInterface
 		return s1.length()-s2.length();
 	}
 
-	
+	//to replace the char2 with char1-----
 	public String replaceMethod(String s1,char ch1,char ch2) {
+		
+		/*String s3="your charcter is not found in String";
+		int cnt=0;
+		for(int i=0;i<s1.length();i++)
+		{
+			if(s1.charAt(i)!=ch1)
+				cnt++;
+		}
+		if(cnt==s1.length())
+			return s3;
+		*/
+		
 		String s2="";
 		for(int i=0;i<s1.length();i++)
 		{
@@ -199,7 +241,7 @@ public class UserDefinedMethodImplements implements UserDefinedMethodInterface
 		return s2;
 	}
 
-	
+	//to convert the string into character array---------
 	public char[] toCharArrayMethod(String s1) {
 		
 		char[] ch=new char[s1.length()];
@@ -210,13 +252,13 @@ public class UserDefinedMethodImplements implements UserDefinedMethodInterface
 		return ch;
 	}
 
-	
-	public String splitMethod(String s1) {
+	//to split the given string-------
+	public String[] splitMethod(String s1,char ch) {
 		String s2="";
 		int spacecnt=0;
 		for(int i=0;i<s1.length();i++)
 		{
-			if(s1.charAt(i)==' ')
+			if(s1.charAt(i)==ch)
 				spacecnt++;
 		}
 		
@@ -226,15 +268,18 @@ public class UserDefinedMethodImplements implements UserDefinedMethodInterface
 		int index=0;
 		for(int i=0;i<s1.length();i++)
 		{
-			if(s1.charAt(i)==' ') {
+			if(s1.charAt(i)!=ch) 
+			{
+				s2=s2+s1.charAt(i);
+			}
+			else
+			{
 				sa[index++]=s2;
 			    s2="";
 			}
-			else
-				s2=s2+s1.charAt(i);
 				
 		}
 		sa[index++]=s2;
-		return s2;
+		return sa;
 	}
 }
