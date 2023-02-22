@@ -16,8 +16,6 @@ public class Main {
 		StringProblemsInterface s=new StringProblemsImplements();
 		UserDefinedMethodInterface sc=new UserDefinedMethodImplements();
 		
-		//System.out.println(s1);
-		
 		while(true)
 		{
 			System.out.println("-----------Choose option : ------------"
